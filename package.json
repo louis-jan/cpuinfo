@@ -1,6 +1,6 @@
 {
-  "name": "cpuinfo",
-  "version": "0.0.1",
+  "name": "cpu-instructions",
+  "version": "0.0.2",
   "description": "Get CPU instructions",
   "main": "index.js",
   "types": "./index.d.ts",
@@ -9,25 +9,17 @@
     "url": "git+https://github.com/louis-jan/cpuinfo.git"
   },
   "scripts": {
-    "install": "node-pre-gyp install --fallback-to-build",
-    "prebuild": "prebuild --runtime napi --all --verbose",
-    "rebuild": "node-gyp rebuild"
+    "install": "node-gyp-build",
+    "build": "prebuildify --napi"
   },
-  "binary": {
-    "module_name": "cpuinfo",
-    "module_path": "./lib/binding/{configuration}/{node_abi}-{platform}-{arch}/",
-    "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}.tar.gz",
-    "host": "https://github.com/louis-jan/cpuinfo/releases/0.0.1",
-    "remote_path": "{version}"
-  },
-  "author": "",
-  "license": "ISC",
+  "author": "louis",
+  "license": "Apache-2.0",
   "gypfile": true,
   "dependencies": {
-    "@mapbox/node-pre-gyp": "^1.0.11",
     "bindings": "^1.5.0",
     "node-addon-api": "^7.0.0",
-    "prebuild-install": "^7.1.1"
+    "node-gyp-build": "^4.8.1",
+    "prebuildify": "^6.0.1"
   },
   "devDependencies": {
     "@types/node": "^20.14.9",
@@ -41,6 +33,7 @@
     "deps/",
     "*.js",
     "*.d.ts",
-    "src/"
+    "src/",
+    "prebuilds/"
   ]
 }

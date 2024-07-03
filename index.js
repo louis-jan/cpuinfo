@@ -1,9 +1,4 @@
-var binary = require("@mapbox/node-pre-gyp");
-var path = require("path");
-var binding_path = binary.find(
-  path.resolve(path.join(__dirname, "./package.json"))
-);
-var binding = require(binding_path);
+var binding = require("node-gyp-build")(__dirname);
 module.exports = exports = { cpuInfo: binding };
 
 // console.log(binding.cpuInfo());

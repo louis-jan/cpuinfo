@@ -3,7 +3,7 @@
 
 /// <reference types="node" />
 export type InstructionSet = 'AVX' | 'AVX2' | 'AVX512'; // Add more as needed later
-declare module "cpuinfo" {
+declare module "cpu-instructions" {
   declare const cpuInfo: {
     cpuInfo: () => InstructionSet[];
   }
