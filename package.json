@@ -17,7 +17,7 @@
     "module_name": "cpuinfo",
     "module_path": "./lib/binding/{configuration}/{node_abi}-{platform}-{arch}/",
     "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}.tar.gz",
-    "host": "https://github.com/louis-jan/cpuinfo/releases/download/0.0.1",
+    "host": "https://github.com/louis-jan/cpuinfo/releases/0.0.1",
     "remote_path": "{version}"
   },
   "author": "",
