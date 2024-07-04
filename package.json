@@ -1,16 +1,17 @@
 {
   "name": "cpu-instructions",
-  "version": "0.0.2",
+  "version": "0.0.10",
   "description": "Get CPU instructions",
-  "main": "index.js",
-  "types": "./index.d.ts",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/louis-jan/cpuinfo.git"
   },
   "scripts": {
     "install": "node-gyp-build",
-    "build": "prebuildify --napi"
+    "build": "prebuildify --napi",
+    "compile": "ncc build src/index.js -o dist"
   },
   "author": "louis",
   "license": "Apache-2.0",
