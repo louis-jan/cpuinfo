@@ -18,7 +18,7 @@
   "gypfile": true,
   "dependencies": {
     "bindings": "^1.5.0",
-    "node-addon-api": "^7.0.0",
+    "node-addon-api": "^8.0.0",
     "node-gyp-build": "^4.8.1",
     "prebuildify": "^6.0.1"
   },
@@ -27,7 +27,7 @@
     "typescript": "^5.5.3"
   },
   "peerDependencies": {
-    "node-gyp": "8.x"
+    "node-gyp": "^10"
   },
   "files": [
     "binding.gyp",
