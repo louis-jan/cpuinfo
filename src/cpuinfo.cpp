@@ -13,7 +13,7 @@ typedef unsigned __int32 uint32_t;
 
 using namespace std;
 
-#if defined(_WIN32) || defined(LINUX)
+#if defined(_WIN32) || defined(__linux__)
 #define MAX_INTEL_TOP_LVL 4
 
 class CPUID
@@ -209,7 +209,7 @@ Napi::Value Method(const Napi::CallbackInfo &info)
 
     uint32_t index = 0;
 
-#if defined(_WIN32) || defined(LINUX)
+#if defined(_WIN32) || defined(__linux__)
     CPUInfo cinfo;
     if (cinfo.isAVX512())
     {
