@@ -1,6 +1,6 @@
 {
   "name": "cpu-instructions",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Get CPU instructions",
   "main": "./src/index.js",
   "types": "./src/index.d.ts",
